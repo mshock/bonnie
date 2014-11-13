@@ -1,6 +1,6 @@
 #!/bin/bash
 logdate=$(date +"%Y%m%d")
-logfile="$logdate"_repoert.log
+logfile="$logdate"_report.log
 while ps -e | grep bonnie++ > /dev/null
 do
        free -m | awk 'NR==2{printf "Memory Usage: %s/%sMB (%.2f%%)\n", $3,$2,$3*100/$2 }'
